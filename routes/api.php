@@ -24,11 +24,15 @@ Route::post('login', [PassportAuthController::class, 'login']);
 
 
 
-Route::middleware('auth:api')->group(function () {
+Route::middleware('auth:api','apilogger')->group(function () {
     Route::get('get-user', [PassportAuthController::class, 'userInfo']);
 
     // Route::resource('products', [ProductController::class]);
 });
+
+// Route::middleware('apilogger')->post('/test',function(){
+//     return response()->json("test");
+// });
 
 
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
