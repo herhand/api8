@@ -21,6 +21,7 @@ use App\Http\Controllers\API\PassportAuthController;
 
 Route::post('register', [PassportAuthController::class, 'register']);
 Route::post('login', [PassportAuthController::class, 'login']);
+Route::post('apilogin', [PassportAuthController::class, 'apiLogin']);
 
 
 
